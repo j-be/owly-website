@@ -20,7 +20,8 @@ jobs:
 
       - name: Minify style.css
         run: |
-          minify -i css/style.css index.html
+          for i in ./css/*.css; do minify $i -o $i; done
+          minify index.html -o index.html
 
       - name: Create bundle.zip
         run: zip -r bundle.zip index.html css/ img/
