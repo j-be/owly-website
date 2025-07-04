@@ -1,0 +1,83 @@
+header.main-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+header.main-header h1 {
+  font-size: 2.618rem;
+  margin-bottom: 0;
+}
+
+header.main-header p {
+  font-size: 1.618rem;
+  line-height: 100%;
+}
+
+#about .grid {
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 2rem;
+}
+
+#about .grid > div:first-child {
+  background-color: var(--pico-contrast-background);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 1rem;
+}
+
+#about img {
+  border-radius: 50%;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  background-color: var(--pico-secondary-background);
+  color: var(--pico-secondary-inverse);
+  text-decoration: none;
+  margin-right: 0.5rem;
+  transition: background-color var(--pico-transition);
+}
+
+.chip:hover {
+  background-color: var(--pico-primary-background);
+  color: var(--pico-primary-inverse);
+}
+
+.icon {
+  margin-right: 0.5rem;
+  display: inline list-item;
+  width: 24px;
+  height: 24px;
+  background-color: #ffffff;
+  mask-size: cover;
+}
+
+h3 .icon {
+  width: 35px;
+  height: 35px;
+}
+
+.icon-github {
+  mask-image: url(../img/github.svg);
+}
+
+.icon-linkedin {
+  mask-image: url(../img/linkedin.svg);
+}
+
+@media (max-width: 768px) {
+  #about .grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  #about .grid > div:first-child {
+    margin: 0 auto 1rem;
+  }
+}
